@@ -5,8 +5,8 @@ describe 'Bank' do
   before{ @message = "Please Select; 1. Deposit 2. Withdrawl 3. Statement 4.Exit:" }
 
   describe 'method1' do
-    it 'ask user for input' do
-      expect(@bank.display_message).to eq(@message)
+    it 'should ask user for input' do
+      expect { @bank.display_message }.to output("#{@message}\n").to_stdout
     end
   end
 

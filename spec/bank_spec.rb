@@ -28,4 +28,13 @@ describe 'Bank' do
     end
   end
 
+  describe 'withdraw' do
+    it 'should decrease value of balance by 500' do
+      @bank.deposit(1000)
+      @bank.deposit(2000)
+      @bank.withdraw(500)
+      expect(@bank.balance).to eq(2500)
+    end
+  end
+
 end

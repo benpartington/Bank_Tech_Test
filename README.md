@@ -25,23 +25,23 @@ date       || credit  || debit    || balance
 
 Example Input in irb:
 
-Please Select; 1. Deposit 2. Withdrawl 3. Statement 4.Exit:
-%> 1
-Please Enter Deposit Amount:
-%> 1000.00
-Thank you, your balance has been updated to: 1000.00
-Please Select; 1. Deposit 2. Withdrawl 3. Statement 4.Exit:
-%> 1
-Please Enter Deposit Amount:
-%> 2000.00
-Thank you, your balance has been updated to: 3000.00
-Please Select; 1. Deposit 2. Withdrawl 3. Statement 4.Exit:
-%> 2
-Please Enter Withdrawal Amount:
-%> 500.00
-Thank you, your balance has been updated to: 2500.00
-Please Select; 1. Deposit 2. Withdrawl 3. Statement 4.Exit:
-%> 3
-(Prints statment above)
+Please Select; 1. Deposit 2. Withdrawl 3. Statement 4.Exit:  
+%> 1  
+Please Enter Deposit Amount:  
+%> 1000.00  
+Thank you, your balance has been updated to: 1000.00  
+Please Select; 1. Deposit 2. Withdrawl 3. Statement 4.Exit:  
+%> 1  
+Please Enter Deposit Amount:  
+%> 2000.00  
+Thank you, your balance has been updated to: 3000.00  
+Please Select; 1. Deposit 2. Withdrawl 3. Statement 4.Exit:  
+%> 2  
+Please Enter Withdrawal Amount:  
+%> 500.00  
+Thank you, your balance has been updated to: 2500.00  
+Please Select; 1. Deposit 2. Withdrawl 3. Statement 4.Exit:  
+%> 3  
+(Prints statment above)  
 
 

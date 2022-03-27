@@ -12,6 +12,7 @@ class Bank
 
   def deposit(amount)
     @balance += amount
+    @credit = amount
   end
 
   def withdraw(amount)
@@ -20,7 +21,7 @@ class Bank
 
   def print_statement
     "date || credit || debit || balance 
-        10/01/2023 || 1000.00 || || 1000.00"
+        10/01/2023 || #{@credit} || || #{@balance}"
   end
   
 end

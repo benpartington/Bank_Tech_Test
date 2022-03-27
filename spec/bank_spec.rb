@@ -45,11 +45,18 @@ describe 'Bank' do
   end
 
   describe '#print_statement' do
-    it 'should return a message with the balance' do
+    it 'should return a message with the credit and balance of 1000' do
       @bank.deposit(1000)
       expect(@bank.print_statement).to eq(
         "date || credit || debit || balance 
-        10/01/2023 || 1000.00 || || 1000.00")
+        10/01/2023 || 1000 || || 1000")
+    end
+
+    it 'should return a message with the credit and balance of 2000' do
+      @bank.deposit(2000)
+      expect(@bank.print_statement).to eq(
+        "date || credit || debit || balance 
+        10/01/2023 || 2000 || || 2000")
     end
   end
 

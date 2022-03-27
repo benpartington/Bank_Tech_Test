@@ -2,11 +2,17 @@ require_relative '../lib/bank.rb'
 
 describe 'Bank' do
   before{ @bank = Bank.new } 
-  before{ @message = "Please Select; 1. Deposit 2. Withdrawl 3. Statement 4.Exit:" }
+  before{ @message = "Welcome to Ben's Bank" }
 
-  describe 'method1' do
+  describe 'welcome_message' do
     it 'should ask user for input' do
-      expect { @bank.display_message }.to output("#{@message}\n").to_stdout
+      expect(@bank.welcome_message).to eq(@message)
+    end
+  end
+
+  describe 'balance' do
+    it 'should return the current balance' do
+      expect(@bank.balance).to eq(0)
     end
   end
 

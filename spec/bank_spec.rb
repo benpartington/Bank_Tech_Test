@@ -16,4 +16,11 @@ describe 'Bank' do
     end
   end
 
+  describe 'deposit' do
+    it 'should increase value of balance' do
+      @bank.deposit(1000)
+      expect(@bank.balance).to eq(1000)
+    end
+  end
+
 end

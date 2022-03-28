@@ -2,8 +2,8 @@ class Bank
   
   attr_reader :balance
 
-  def initialize
-    @balance = 0
+  def initialize(start_bal = 0)
+    @balance = start_bal
   end
 
   def welcome_message
@@ -17,11 +17,12 @@ class Bank
 
   def withdraw(amount)
     @balance -= amount
+    @debit = amount
   end
 
   def print_statement
     "date || credit || debit || balance 
-        10/01/2023 || #{@credit} || || #{@balance}"
+        10/01/2023 || #{@credit} || #{@debit} || #{@balance}"
   end
   
 end

@@ -38,13 +38,12 @@ describe 'Bank' do
   end
 
   describe '#print_statement' do
+
+  #below: not sure how to test put string output, especially when using strftime!
     it 'should return message with correct credit and balance when balance increased by 1000' do
       @bank.deposit(1000)
-      expect(@bank.print_statement).to eq([
-        "date || credit || debit || balance\n", "10/01/2023 || 1000 || || 1000"
-      ])
+      expect{@bank.print_statement}.to output("date || credit || debit || balance\n", "10/01/2023 || 1000 || || 1000").to_stdout      
     end
-  
 
     it 'should return message with correct credit and balance when balance increased by 2000' do
       @bank.deposit(2000)

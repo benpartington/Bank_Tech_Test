@@ -14,12 +14,12 @@ class Bank
 
   def deposit(amount)
     @balance += amount
-    @history << "10/01/2023 || #{@amount} || || #{@balance}"
+    @history << "#{Time.now.strftime("%d/%m/%Y %H:%M:%S")} || #{@amount} || || #{@balance}"
   end
 
   def withdraw(amount)
     @balance -= amount
-    @history << "10/01/2023 || || #{amount} || #{@balance}"
+    @history << "#{Time.now.strftime("%d/%m/%Y %H:%M:%S")} || || #{amount} || #{@balance}"
   end
 
   def print_statement

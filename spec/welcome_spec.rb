@@ -9,10 +9,10 @@ describe 'Welcome' do
   let(:bank) { Bank.new(@welcome) }
 
 
-  describe '#welcome_message' do
-    it 'should ask user for input' do
-      expect(bank.welcome_message).to eq(@message)
-    end
-  end
+  # describe '#welcome_message' do
+  #   it 'should ask user for input' do
+  #     expect(bank.welcome_message).to eq(@message)
+  #   end
+  # end
 
 end

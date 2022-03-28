@@ -35,7 +35,17 @@ Example Input in irb:
 = 1000
 %> bank.withdraw(500) 
 %> bank.balance
-= 500
+= 500  
 
 
+QuickRun IRB
 
+------------------  
+irb
+
+require './bank.rb'  
+bank = Bank.new  
+bank.deposit(2000)  
+bank.deposit(1000)  
+bank.withdraw(500)  
+bank.print_statement  

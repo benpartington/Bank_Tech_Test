@@ -5,7 +5,7 @@ class Bank
   def initialize(welcome_class = nil) #dependency injection
     @balance = 0
     @instance_of_welcome_class = welcome_class
-    @history = ["date || credit || debit || balance\n"]
+    @history = []
   end
 
   def welcome
@@ -25,7 +25,8 @@ class Bank
   end
 
   def print_statement
-    @history   
+    result = @history.reverse  
+    puts result.prepend("date || credit || debit || balance\n")
   end
   
 end

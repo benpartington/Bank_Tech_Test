@@ -52,9 +52,7 @@ describe 'Bank' do
     it 'should return message with correct credit, debit and balance when balance decreased by 500' do
       @bank.deposit(1000)
       @bank.withdraw(500)
-      expect(@bank.print_statement).to eq(
-        "date || credit || debit || balance 
-        10/01/2023 || 1000 || 500 || 500")
+      expect(@bank.print_statement).to eq(["date || credit || debit || balance\n", "10/01/2023 || 1000 || || 1000", "10/01/2023 || || 500 || 500"])
     end
   end
 

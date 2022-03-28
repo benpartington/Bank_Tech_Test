@@ -8,6 +8,8 @@ describe 'Welcome' do
   before { @welcome = Welcome.new }
   let(:bank) { Bank.new(@welcome) }
 
+  # Can't figure out how to make these tests pass! 
+  # Something to do with the dependency injection I think
 
   # describe '#welcome_message' do
   #   it 'should ask user for input' do

@@ -4,7 +4,7 @@ class Bank
 
   def initialize(welcome_class = nil) #dependency injection
     @balance = 0
-    @instance_of_welcome_class = welcome_class
+    @instance_of_welcome_class = welcome_class #dependency injection
     @history = []
   end
 
@@ -14,19 +14,17 @@ class Bank
 
   def deposit(amount)
     @balance += amount
-    @credit = amount
-    @history << "10/01/2023 || #{@credit} || || #{@balance}"
+    @history << "10/01/2023 || #{@amount} || || #{@balance}"
   end
 
   def withdraw(amount)
     @balance -= amount
-    @debit = amount
-    @history << "10/01/2023 || || #{@debit} || #{@balance}"
+    @history << "10/01/2023 || || #{amount} || #{@balance}"
   end
 
   def print_statement
-    result = @history.reverse  
-    puts result.prepend("date || credit || debit || balance\n")
+    statement = @history.reverse  
+    puts statement.prepend("date || credit || debit || balance\n")
   end
   
 end

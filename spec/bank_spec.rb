@@ -59,8 +59,6 @@ describe 'Bank' do
         "date || credit || debit || balance 
         10/01/2023 || 1000 || 500 || 500")
     end
-
-
   end
 
 end

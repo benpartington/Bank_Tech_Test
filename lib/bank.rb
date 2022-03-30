@@ -2,14 +2,9 @@ class Bank
   
   attr_reader :balance
 
-  def initialize(welcome_class = nil) #dependency injection
+  def initialize
     @balance = 0
-    @instance_of_welcome_class = welcome_class #dependency injection
     @history = []
-  end
-
-  def welcome
-    @instance_of_welcome_class.welcome_message #dependency injection
   end
 
   def deposit(amount)

@@ -39,6 +39,7 @@ describe 'Bank' do
     end
   end
 
+  
   describe '#print_statement' do
     let(:date) { Date.today.strftime('%d/%m/%Y') }
 

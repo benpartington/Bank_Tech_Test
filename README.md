@@ -1,6 +1,34 @@
 Bank (Tech Test)
 ----------------
 
+### Tech 
+
+Ruby  
+Rspec  
+Prettier  
+
+### Installs
+
+Install rspec with:
+```
+$> gem install rspec
+```  
+Clone the source code:
+```
+%> git clone https://github.com/benpartington/bank_tech_test.git
+```
+### Testing  
+
+To run a test:
+```
+%> rspec
+```
+
+### How to run the program!
+Please navigate to lib directory follow the commands shown below:  
+
+
+
 ### Requirements
 
 * You should be able to interact with your code via a REPL like IRB or Node.  (You don't need to implement a command line interface that takes input from STDIN.)
@@ -22,30 +50,3 @@ date       || credit  || debit    || balance
 13/01/2023 || 2000.00 ||          || 3000.00
 10/01/2023 || 1000.00 ||          || 1000.00
 ```
-
-Example Input in irb:
-(launch irb from lib directory in terminal)  
-
-%> require './bank.rb'  
-%> bank = Bank.new  
-%> bank.balance
-= 0
-%> bank.deposit(1000)
-%> bank.balance
-= 1000
-%> bank.withdraw(500) 
-%> bank.balance
-= 500  
-
-
-QuickRun IRB
-
-------------------  
-irb
-
-require './bank.rb'  
-bank = Bank.new  
-bank.deposit(2000)  
-bank.deposit(1000)  
-bank.withdraw(500)  
-bank.print_statement  

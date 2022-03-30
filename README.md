@@ -26,6 +26,7 @@ To run a test:
 
 ### How to run the program!
 Please navigate to lib directory follow the commands shown below:  
+![alt text] (https://github.com/benpartington/bank_tech_test/blob/main/docs/irb_test.png)
 
 
 

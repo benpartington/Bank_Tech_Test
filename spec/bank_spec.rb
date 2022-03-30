@@ -1,4 +1,6 @@
 require_relative '../lib/bank.rb'
+require 'date'
+
 
 describe 'Bank' do
   before{ @bank = Bank.new } 
@@ -38,26 +40,32 @@ describe 'Bank' do
   end
 
   describe '#print_statement' do
+    let(:date) { Date.today.strftime('%d/%m/%Y') }
 
-  #below: not sure how to test put string output, especially when using strftime!
     it 'should return message with correct credit and balance when balance increased by 1000' do
       @bank.deposit(1000)
-      expect{@bank.print_statement}.to output("date || credit || debit || balance\n", "10/01/2023 || 1000 || || 1000").to_stdout      
+      expect{@bank.print_statement}.to output(
+        "date || credit || debit || balance\n"\
+        "#{date} || 1000 || || 1000\n"
+        ).to_stdout      
     end
 
     it 'should return message with correct credit and balance when balance increased by 2000' do
       @bank.deposit(2000)
-      expect(@bank.print_statement).to eq([
-        "date || credit || debit || balance\n", "10/01/2023 || 2000 || || 2000"
-      ])
+      expect{@bank.print_statement}.to output(
+        "date || credit || debit || balance\n"\
+        "#{date} || 2000 || || 2000\n"
+      ).to_stdout
     end
 
     it 'should return message with correct credit, debit and balance when balance decreased by 500' do
-      @bank.deposit(1000)
+      @bank.deposit(2000)
       @bank.withdraw(500)
-      expect(@bank.print_statement).to eq([
-        "date || credit || debit || balance\n", "10/01/2023 || || 500 || 500", "10/01/2023 || 1000 || || 1000"
-      ])
+      expect{@bank.print_statement}.to output(
+        "date || credit || debit || balance\n"\
+        "#{date} || || 500 || 1500\n"\
+        "#{date} || 2000 || || 2000\n"
+      ).to_stdout
     end
   end
 

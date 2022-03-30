@@ -1,3 +1,5 @@
+require 'date'
+
 class Bank
   
   attr_reader :balance
@@ -9,12 +11,12 @@ class Bank
 
   def deposit(amount)
     @balance += amount
-    @history << "#{Time.now.strftime("%d/%m/%Y %H:%M:%S")} || #{@amount} || || #{@balance}"
+    @history << "#{Date.today.strftime('%d/%m/%Y')} || #{amount} || || #{@balance}"
   end
 
   def withdraw(amount)
     @balance -= amount
-    @history << "#{Time.now.strftime("%d/%m/%Y %H:%M:%S")} || || #{amount} || #{@balance}"
+    @history << "#{Date.today.strftime("%d/%m/%Y")} || || #{amount} || #{@balance}"
   end
 
   def print_statement

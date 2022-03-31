@@ -34,7 +34,7 @@ Please navigate to lib directory follow the commands shown below:
 - I started by creating a bank_spec with the idea that I'd begin with a single (potentially large) class, and extract from it later during refactor
 - I wrote my first test to be as simple as possible, returning a balance
 - Next I added more complex tests for deposit and withdrawal, and implemented them
-- Finally I wrote tests for printing a statement, a history of transaction 
+- Finally I wrote tests for printing a statement, a history of transactions
 
 
 
